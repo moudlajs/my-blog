@@ -3,25 +3,27 @@ import { slugifyStr } from "@/utils/slugify";
 import type { CollectionEntry } from "astro:content";
 import { getPath } from "@/utils/getPath";
 import Datetime from "./Datetime.astro";
+import { getReadingTime } from "@/utils/getReadingTime";
 
 export interface Props extends CollectionEntry<"blog"> {
   variant?: "h2" | "h3";
 }
 
-const { variant = "h2", data, id, filePath } = Astro.props;
+const { variant = "h2", data, id, filePath, body } = Astro.props;
 
-const { title, description, pubDatetime, modDatetime, timezone } = data;
+const { title, description, pubDatetime, modDatetime, timezone, tags } = data;
+
+const readingTime = getReadingTime(body);
 
 const headerProps = {
-  style: { viewTransitionName: slugifyStr(title) },
-  class: "text-lg font-medium decoration-dashed hover:underline",
+  class: "text-lg font-medium article-hover-bg decoration-dashed hover:underline",
 };
 ---
 
 <li class="my-6">
   <a
     href={getPath(id, filePath)}
-    class="inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+    class="inline-block text-lg font-medium text-accent focus-visible:no-underline focus-visible:underline-offset-0"
   >
     {
       variant === "h2" ? (
@@ -31,6 +33,28 @@ const headerProps = {
       )
     }
   </a>
-  <Datetime {pubDatetime} {modDatetime} {timezone} />
+  <div class="flex flex-wrap items-center gap-x-2 text-sm">
+    <Datetime {pubDatetime} {modDatetime} {timezone} />
+    <span aria-hidden="true" class="opacity-80">|</span>
+    <span class="opacity-80">{readingTime} min</span>
+    {
+      tags && (
+        <>
+          <span aria-hidden="true">|</span>
+          <div class="flex flex-wrap gap-x-2">
+            🏷️
+            {tags.map(tag => (
+              <a
+                href={`/tags/${slugifyStr(tag)}/`}
+                class="underline decoration-dashed underline-offset-4 hover:text-accent"
+              >
+                #{tag}
+              </a>
+            ))}
+          </div>
+        </>
+      )
+    }
+  </div>
   <p>{description}</p>
 </li>

@@ -67,3 +67,63 @@ html[data-theme="dark"] {
 :target {
   scroll-margin-block: 1rem;
 }
+
+/* Animated underline effect */
+.animated-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.animated-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Parallelogram hover effect for nav items */
+.nav-parallelogram {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.nav-parallelogram::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent);
+  clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+}
+
+.nav-parallelogram span {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-parallelogram:hover::before {
+  opacity: 1;
+}
+
+.nav-parallelogram:hover {
+  color: var(--color-background);
+}
+
+/* Article title hover - no color change needed, just underline */
+.article-hover-bg {
+  /* No special styles needed */
+}
+

@@ -1,0 +1,48 @@
+---
+// Giscus Comments Component
+// Setup instructions:
+// 1. Go to https://github.com/apps/giscus and install it on your blog repo
+// 2. Enable Discussions in your repo settings
+// 3. Go to https://giscus.app/ to get your configuration
+// 4. Replace the values below with your own
+
+const GISCUS_CONFIG = {
+  repo: "YOUR-USERNAME/YOUR-REPO", // Replace with your repo (e.g., "moudlajs/my-blog")
+  repoId: "YOUR_REPO_ID", // Get from giscus.app
+  category: "General", // Discussion category name
+  categoryId: "YOUR_CATEGORY_ID", // Get from giscus.app
+  mapping: "pathname",
+  reactionsEnabled: "1",
+  emitMetadata: "0",
+  inputPosition: "top",
+  theme: "preferred_color_scheme", // Auto dark/light mode
+  lang: "en",
+};
+---
+
+<div class="giscus-wrapper mt-8">
+  <script
+    is:inline
+    src="https://giscus.app/client.js"
+    data-repo={GISCUS_CONFIG.repo}
+    data-repo-id={GISCUS_CONFIG.repoId}
+    data-category={GISCUS_CONFIG.category}
+    data-category-id={GISCUS_CONFIG.categoryId}
+    data-mapping={GISCUS_CONFIG.mapping}
+    data-strict="0"
+    data-reactions-enabled={GISCUS_CONFIG.reactionsEnabled}
+    data-emit-metadata={GISCUS_CONFIG.emitMetadata}
+    data-input-position={GISCUS_CONFIG.inputPosition}
+    data-theme={GISCUS_CONFIG.theme}
+    data-lang={GISCUS_CONFIG.lang}
+    crossorigin="anonymous"
+    async
+  ></script>
+</div>
+
+<style>
+  .giscus-wrapper {
+    padding-top: 2rem;
+    border-top: 1px dashed var(--color-border);
+  }
+</style>

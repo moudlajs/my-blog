@@ -1,5 +1,5 @@
 ---
-import { ClientRouter } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions";
 import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
 import { SITE } from "@/config";
 import "@/styles/global.css";
@@ -128,7 +128,8 @@ const structuredData = {
       )
     }
 
-    <ClientRouter />
+    <!-- ViewTransitions disabled - add back if needed -->
+    <!-- <ViewTransitions /> -->
 
     <script is:inline src="/toggle-theme.js"></script>
   </head>

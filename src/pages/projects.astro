@@ -1,0 +1,70 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/layouts/Main.astro";
+---
+
+<Layout title="Projects | DeeCee's Blog">
+  <Header />
+  <Main pageTitle="My Projects" pageDesc="Showcasing my work in OS engineering and related fields.">
+    <div class="grid grid-cols-2 gap-6">
+
+      <!-- Project 1: HomeLab CLI Tool -->
+      <div class="border border-border rounded-lg p-5 bg-background hover:border-accent hover:shadow-xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-xl font-semibold text-accent mb-2">HomeLab CLI Tool</h2>
+        <p class="text-sm text-foreground mb-4">
+          A comprehensive C# CLI tool for managing my Mac Mini homelab, integrating Docker, WireGuard, Prometheus, Traefik, Home Assistant, network monitoring, and more. Built with Spectre.Console for a beautiful terminal experience.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-3 border-t border-border/50">
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#C#</span>
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#CLI</span>
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#Homelab</span>
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#DevOps</span>
+        </div>
+      </div>
+
+      <!-- Project 2: Azure Infrastructure -->
+      <div class="border border-border rounded-lg p-5 bg-background hover:border-accent hover:shadow-xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-xl font-semibold text-accent mb-2">Azure Infrastructure with Terraform</h2>
+        <p class="text-sm text-foreground mb-4">
+          Real-world Azure infrastructure project featuring basic networking, private endpoints, VNet integration, and secure resource deployment. Production-ready Terraform modules for enterprise environments.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-3 border-t border-border/50">
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#Terraform</span>
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#Azure</span>
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#Networking</span>
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#IaC</span>
+        </div>
+      </div>
+
+      <!-- Project 3: URL Shortener -->
+      <div class="border border-border rounded-lg p-5 bg-background hover:border-accent hover:shadow-xl hover:scale-105 transition-all duration-300">
+        <h2 class="text-xl font-semibold text-accent mb-2">Custom URL Shortener</h2>
+        <p class="text-sm text-foreground mb-4">
+          A lightweight, self-hosted URL shortener built with JavaScript. Features custom short codes, analytics tracking, and API access for programmatic link creation.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-3 border-t border-border/50">
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#JavaScript</span>
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#Node.js</span>
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#API</span>
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted text-foreground">#Web</span>
+        </div>
+      </div>
+
+      <!-- Project 4: Open to Ideas (Placeholder) -->
+      <div class="border border-dashed border-border/50 rounded-lg p-5 bg-gradient-to-br from-muted to-background hover:scale-105 transition-all duration-300">
+        <h2 class="text-xl font-semibold text-foreground/60 mb-2">Open to Ideas</h2>
+        <p class="text-sm text-foreground/50 italic mb-4">
+          This spot reserved for that one project idea that's definitely happening. Any day now. Yep.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-3 border-t border-border/30">
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted/50 text-foreground/50">#Future</span>
+          <span class="px-2 py-1 text-xs font-medium rounded-md bg-muted/50 text-foreground/50">#Collaboration</span>
+        </div>
+      </div>
+
+    </div>
+  </Main>
+  <Footer />
+</Layout>
