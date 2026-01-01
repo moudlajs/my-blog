@@ -56,14 +56,7 @@ window.onload = () => {
 
     // now this script can find and listen for clicks on the control
     document.querySelector("#theme-btn")?.addEventListener("click", () => {
-      // Cycle through 3 themes: light → dark → ocean → light
-      if (themeValue === "light") {
-        themeValue = "dark";
-      } else if (themeValue === "dark") {
-        themeValue = "ocean";
-      } else {
-        themeValue = "light";
-      }
+      themeValue = themeValue === "light" ? "dark" : "light";
       setPreference();
     });
   }
