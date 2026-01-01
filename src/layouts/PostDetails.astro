@@ -16,6 +16,7 @@ import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 import { getReadingTime } from "@/utils/getReadingTime";
 import TableOfContents from "@/components/TableOfContents.astro";
+import Giscus from "@/components/Giscus.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -149,6 +150,8 @@ const nextPost =
     <BackToTopButton />
 
     <ShareLinks />
+
+    <Giscus />
 
     <hr class="my-6 border-dashed" />
 

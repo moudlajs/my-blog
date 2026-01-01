@@ -1,5 +1,5 @@
 ---
-title: "The 2025 Bug of the Year Award: The Case of the Pregnant Grim Reaper"
+title: "Bug of the Year: The Pregnant Grim Reaper"
 pubDatetime: 2025-12-30
 author: "Daniel Czetner"
 description: "As 2025 comes to a close, we look back at the most bizarre software bug of the year, and wonder: how on earth did this happen?"

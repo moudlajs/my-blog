@@ -95,7 +95,6 @@ html[data-theme="dark"] {
 /* Parallelogram hover effect for nav items */
 .nav-parallelogram {
   position: relative;
-  transition: all 0.2s ease;
 }
 
 .nav-parallelogram::before {
