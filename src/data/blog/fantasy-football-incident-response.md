@@ -5,10 +5,7 @@ author: "Daniel Czetner"
 description: "After my first fantasy season, I started noticing some odd similarities between managing a fantasy team and handling production incidents. Here's what stuck out."
 tags:
   - devops
-  - incident-response
   - nfl
-  - fantasy-football
-  - observations
 ---
 
 Somewhere around Week 10 of my first fantasy football season, I started noticing something weird. The mental gymnastics I was doing on Sunday mornings—staring at injury reports, weighing matchups, making last-minute lineup decisions—felt *uncomfortably familiar*.

@@ -4,6 +4,7 @@ import type { CollectionEntry } from "astro:content";
 import { getPath } from "@/utils/getPath";
 import Datetime from "./Datetime.astro";
 import { getReadingTime } from "@/utils/getReadingTime";
+import IconHash from "@/assets/icons/IconHash.svg";
 
 export interface Props extends CollectionEntry<"blog"> {
   variant?: "h2" | "h3";
@@ -41,8 +42,8 @@ const headerProps = {
       tags && (
         <>
           <span aria-hidden="true">|</span>
-          <div class="flex flex-wrap gap-x-2">
-            🏷️
+          <div class="flex items-center flex-wrap gap-x-2">
+            <IconHash class="inline-block size-4 min-w-[1rem] opacity-80" />
             {tags.map(tag => (
               <a
                 href={`/tags/${slugifyStr(tag)}/`}

@@ -13,6 +13,7 @@ import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
+import IconHash from "@/assets/icons/IconHash.svg";
 import { SITE } from "@/config";
 import { getReadingTime } from "@/utils/getReadingTime";
 import TableOfContents from "@/components/TableOfContents.astro";
@@ -117,8 +118,8 @@ const nextPost =
         >
         <EditPost {hideEditPost} {post} class="max-sm:hidden" />
       </div>
-      <div class="flex flex-wrap gap-x-2">
-        🏷️
+      <div class="flex items-center flex-wrap gap-x-2">
+        <IconHash class="inline-block size-4 min-w-[1rem] opacity-80" />
         {
           tags.map(tag => (
             <a
