@@ -1,8 +1,8 @@
 export const SITE = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
+  website: "https://danielczetner.com/", // Your custom domain (or use https://moudlajs.github.io/my-blog/ for GitHub Pages default)
   author: "Daniel Czetner",
-  profile: "https://satnaing.dev/",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
+  profile: "https://github.com/moudlajs",
+  desc: "DevOps engineer, fantasy football analyst, and occasional writer. Based in Brno, Czech Republic.",
   title: "DeeCee's blog",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
@@ -14,10 +14,10 @@ export const SITE = {
   editPost: {
     enabled: true,
     text: "Edit page",
-    url: "https://github.com/satnaing/astro-paper/edit/main/",
+    url: "https://github.com/moudlajs/my-blog/edit/main/",
   },
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
   lang: "en", // html lang code. Set this empty and default will be "en"
-  timezone: "Asia/Bangkok", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  timezone: "Europe/Prague", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 } as const;
