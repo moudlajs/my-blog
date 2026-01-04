@@ -39,11 +39,11 @@ const isActive = (path: string) => {
       class="relative flex w-full items-center justify-between bg-background py-4 px-4 sm:py-8"
     >
       <a
-        href="/"
+        href={import.meta.env.BASE_URL}
         class="group inline-flex items-center p-2 transition-colors hover:text-accent"
       >
         <img
-          src="/avatar.jpeg"
+          src={import.meta.env.BASE_URL + "avatar.jpeg"}
           alt="DeeCee avatar"
           class="w-20 h-20 rounded-full mr-3 sm:w-24 sm:h-24"
         />
@@ -77,7 +77,7 @@ const isActive = (path: string) => {
         >
           <li class="col-span-2">
             <a
-              href="/posts"
+              href={import.meta.env.BASE_URL + "posts"}
               class="nav-parallelogram whitespace-nowrap px-3 py-2 text-base font-semibold sm:text-lg"
             >
               <span>Posts</span>
@@ -85,7 +85,7 @@ const isActive = (path: string) => {
           </li>
           <li class="col-span-2">
             <a
-              href="/projects"
+              href={import.meta.env.BASE_URL + "projects"}
               class="nav-parallelogram whitespace-nowrap px-3 py-2 text-base font-semibold sm:text-lg"
             >
               <span>Projects</span>
@@ -93,7 +93,7 @@ const isActive = (path: string) => {
           </li>
           <li class="col-span-2">
             <a
-              href="/books"
+              href={import.meta.env.BASE_URL + "books"}
               class="nav-parallelogram whitespace-nowrap px-3 py-2 text-base font-semibold sm:text-lg"
             >
               <span>Books</span>
@@ -101,7 +101,7 @@ const isActive = (path: string) => {
           </li>
           <li class="col-span-1 flex items-center justify-center">
             <LinkButton
-              href="/search"
+              href={import.meta.env.BASE_URL + "search"}
               class:list={[
                 "focus-outline flex p-3 sm:p-1",
                 { "[&>svg]:stroke-accent": isActive("/search") },
